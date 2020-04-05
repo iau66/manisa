@@ -1,0 +1,52 @@
+web teknolojileri proje ödevi
+
+İbrahim Uysal
+G181210069
+Github linki: https://github.com/iau66/manisa
+
+Projenin amacı:
+	
+
+	-Kendimi ve yaşadığım şehri (Manisa) tanıtan bir web sitesi geliştirmek.
+
+
+Proje İçeriği:
+
+	
+	Hakkında sayfası
+	-Kişisel bilgiler ve ilgi alanları (resimle, linkler vb içermeli)
+
+	Özgeçmiş sayfası
+	-Eğitim bilgilerini içeren CV niteliğinde, table ve div kullanılarak oluşturulmalı
+
+	Şehrim sayfası
+	-Şehre ait tanıtıcı metin
+	-En az 4 fotoğraf içeren bir slider
+	-Slider üzerine tıklandığında aynı sitede ilgili resmin ilgili içeriğine göndermeli
+
+	Mirasımız sayfası
+	-şehre ait kültürel bir miras html elemanları kullanılarak tanıtılmalı
+
+	Login sayfası
+	-kullanıcı adı ve şifre istemeli
+	-Eğer kullanıcı adı ve şifre doğruysa "Hoşgeldiniz ..." mesajı vermeli
+	-Eğer kullanıcı adı veya şifre yanlış ise login sayfasına geri dönülmeli
+	-Kullanıcı adının mail olup olmadığı,
+	-Kullanıcı adı ve şifrenin boş olup olmadığı kontrol edilmeli
+
+	İletişim sayfası
+	-Form elemanları kullanılmalı
+	-Kontrol işlemleri javascript ile yapılmalı
+	-Gönderilen form bilgileri başka bir sayfada görüntülenmeli
+
+
+Proje süreci
+
+
+	Projenin 3 farklı versiyonu olacak:
+
+	-html ve css ile projenin taslağı oluşturulması ardından gerekli metin ve görsellerin eklenmesi.
+
+	-gerekli javascript ve php dosyalarının tamamlanması.
+
+	-eksik kalanların tamamlanması ve görünümün güzelleştirilmesi.
