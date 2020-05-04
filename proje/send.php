@@ -1,31 +1,29 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>İAU | Giriş</title>
-    
-
+    <title>İAU | Çıkış </title>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <style>
+    <style>  
+        
     .jumbotron {
-    padding-top: 10px;
+    padding-top: 20px;
     background-image: url(img/white.png)
     }
+    .bodi {
+        margin: auto;
+        text-align: center;
+    }
+       
+
         
-        
-        .bodi {
-            margin: auto;
-        }
-        
-        footer{
-            margin-top: 290px;
-        }
     </style>
 </head>
 <body>
-   
    
     <nav class="navbar bg-dark navbar-expand-sm navbar-dark fixed-top">
         <div class="container">
@@ -66,12 +64,12 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="iletisim.html" class="nav-link ">
+                    <a href="iletisim.html" class="nav-link active">
                         İletişim
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="giris.html" class="nav-link active">
+                    <a href="giris.html" class="nav-link">
                         Giriş
                     </a>
                 </li>
@@ -82,46 +80,55 @@
         </div>
     </nav>
     
+    
     <header>
         <div class="jumbotron bg-dark text-info">
            <div class="container">
            </div>
-        </div>        
+        </div>
     </header>
-
-       
-
-    <div class="bodi shadow bg-light mt-5 p-4 border-info border rounded w-75">
-       
-    <form action="login.php" method="POST">
-        
-        <div class="form-group">
-           <label for="email">Kullanıcı Adı:</label>
-            <input type="email" name="username" class="form-control" placeholder="kullanıcı adı giriniz" autofocus required>
-        </div>
-        
-        <div class="form-group">
-           <label for="password">Şifre:</label>
-            <input type="password" name="password" class="form-control" placeholder="şifre giriniz" required>
-        </div>
-        
-        <button class="btn btn-primary btn" type="submit" value="Giris">Giriş</button>
-
-    </form></div>
-       
-     
-       
-       
-
-        
-
-
-        <footer class="py-5 bg-dark text-white text-center">
-        2020
-    </footer>
     
+    <div class="bodi shadow bg-light mt-5 p-4 border-success border rounded w-75 mt-5">
+<p class="h4 text-success">Gönderildi <img src="img/tick.png" alt=""></p>
+<?php
+
+
+    $isim = $_POST["isim"];
+    $soyisim = $_POST["soyisim"];
+    $email = $_POST["email"];
+    $cinsiyet = $_POST["cinsiyet"];
+    $sehir = $_POST["city"];
+    $hobiler = $_POST["hobies"];
+    $message = $_POST["message"];
+
+    echo "isim: ".$isim;
+    echo "<br>";
+    echo "soyisim: ".$soyisim;
+    echo "<br>";
+    echo "e-mail: ".$email;
+    echo "<br>";
+    echo "cinsiyet: ".$cinsiyet;
+    echo "<br>";
+    echo "sehir: ".$sehir;
+    echo "<br>";
+    echo "hobiler: ";
+
+
+    foreach($hobiler as $key => $value){
+    echo $value; 
+    echo " ";
+    }
+
+    echo "<br>";
+    echo "mesaj: ".$message;
+?> 
+    </div>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" ></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script> 
 </body>
 </html>
+
+
+
+

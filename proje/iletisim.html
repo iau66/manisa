@@ -10,11 +10,79 @@
     <link rel="stylesheet" href="style.css">
     <style>
     .jumbotron {
-    padding-top: 20px;
+    padding-top: 10px;
     background-image: url(img/white.png)
     }
         
+    .bodi {
+            margin: auto;
+    }
+        
     </style>
+    
+        <script type="text/javascript">
+            function isValid(frm)
+            { 
+                var isim = frm.isim.value;
+                var soyisim = frm.soyisim.value;
+                var email = frm.email.value;
+                var atpos=email.indexOf("@");
+                var dotpos=email.lastIndexOf(".");
+                var rad1 = document.getElementById("rd1");
+                var rad2 = document.getElementById("rd2");
+                var rad3 = document.getElementById("rd3");
+                var slc = document.getElementById("slct");
+                var chk1 = document.getElementById("chk1");
+                var chk2 = document.getElementById("chk2");
+                var chk3 = document.getElementById("chk3");
+                var chk4 = document.getElementById("chk4");
+                var message = frm.message.value;
+                
+                if ( isim==null || isim=="" )
+                {
+                    alert("isim boş bırakılamaz");
+                    return false;
+                }
+                if ( soyisim==null || soyisim=="" )
+                {
+                    alert("soyisim boş bırakılamaz");
+                    return false;
+                }
+                if ( atpos<1 || dotpos<atpos+2 || dotpos+2>=email.length )
+                {
+                    alert("Geçerli email adresi girin");
+                    return false;
+                }    
+                
+                if (rad1.checked==false && rad2.checked==false && rad3.checked==false)    
+                {
+                    alert("cinsiyet boş bırakılamaz");
+                    return false;
+                }
+                if (slc.options[slc.selectedIndex].value == "0")
+                {
+                    alert("şehir seçmeyi unuttunuz");
+                    return false;
+                }
+                
+                if (chk1.checked==false && chk2.checked==false && chk3.checked==false && chk4.checked==false)    
+                {
+                    alert("hobi seçmeyi unuttunuz");
+                    return false;
+                } 
+                if ( message==null || message=="" )
+                {
+                    alert("mesaj yazmadınız");
+                    return false;
+                }
+                
+
+                
+                return true;
+                                
+                
+            }
+</script>
 </head>
 <body>
    
@@ -80,10 +148,162 @@
            </div>
         </div>
     </header>
-    
+    <!--------------------------------------------------------------------------->
+    <div class="bodi shadow bg-light mt-5 p-4 border-info border rounded w-75 mb-5">
 
 
+    <form action="send.php" method="post" onsubmit="return isValid(this)" enctype="multipart/form-data">
+
+    <div class="form-group">
+    <label for="isim">İsim:</label>
+	<input type="text" name="isim" placeholder="isminizi yazınız" class="form-control" >
+	</div>
+    <div class="form-group">
+    <label for="soyisim">Soyisim:</label>
+	<input type="text" name="soyisim" placeholder="soyisminizi yazınız" class="form-control" >
+	</div>
+	<div class="form-group">
+	<label for="mail">E-posta:</label>
+	<input type="mail" name="email" placeholder="E-posta adresinizi yazınız" class="form-control" >
+	</div>	
+
     
+    	<div class="form-group">
+    <label for="cinsiyet">Cinsiyet:</label><br>
+    <input type="radio" name="cinsiyet" value="erkek" id="rd1"> Erkek<br>
+    <input type="radio" name="cinsiyet" value="kadın" id="rd2"> Kadın<br>	
+    <input type="radio" name="cinsiyet" value="belirtmemeyi tercih ediyorum" id="rd3"> Belirtmemeyi tercih ediyorum<br>
+    </div>	
+    			
+	    <div class="form-group">
+            <label for="city">Şehriniz:</label>
+            <select name="city" id="slct" class="form-control">
+                        <option value="0">Şehir seçiniz</option>
+                        <option value="1">Adana</option>
+                        <option value="2">Adıyaman</option>
+                        <option value="3">Afyonkarahisar</option>
+                        <option value="4">Ağrı</option>
+                        <option value="5">Amasya</option>
+                        <option value="6">Ankara</option>
+                        <option value="7">Antalya</option>
+                        <option value="8">Artvin</option>
+                        <option value="9">Aydın</option>
+                        <option value="10">Balıkesir</option>
+                        <option value="11">Bilecik</option>
+                        <option value="12">Bingöl</option>
+                        <option value="13">Bitlis</option>
+                        <option value="14">Bolu</option>
+                        <option value="15">Burdur</option>
+                        <option value="16">Bursa</option>
+                        <option value="17">Çanakkale</option>
+                        <option value="18">Çankırı</option>
+                        <option value="19">Çorum</option>
+                        <option value="20">Denizli</option>
+                        <option value="21">Diyarbakır</option>
+                        <option value="22">Edirne</option>
+                        <option value="23">Elazığ</option>
+                        <option value="24">Erzincan</option>
+                        <option value="25">Erzurum</option>
+                        <option value="26">Eskişehir</option>
+                        <option value="27">Gaziantep</option>
+                        <option value="28">Giresun</option>
+                        <option value="29">Gümüşhane</option>
+                        <option value="30">Hakkâri</option>
+                        <option value="31">Hatay</option>
+                        <option value="32">Isparta</option>
+                        <option value="33">Mersin</option>
+                        <option value="34">İstanbul</option>
+                        <option value="35">İzmir</option>
+                        <option value="36">Kars</option>
+                        <option value="37">Kastamonu</option>
+                        <option value="38">Kayseri</option>
+                        <option value="39">Kırklareli</option>
+                        <option value="40">Kırşehir</option>
+                        <option value="41">Kocaeli</option>
+                        <option value="42">Konya</option>
+                        <option value="43">Kütahya</option>
+                        <option value="44">Malatya</option>
+                        <option value="45">Manisa</option>
+                        <option value="46">Kahramanmaraş</option>
+                        <option value="47">Mardin</option>
+                        <option value="48">Muğla</option>
+                        <option value="49">Muş</option>
+                        <option value="50">Nevşehir</option>
+                        <option value="51">Niğde</option>
+                        <option value="52">Ordu</option>
+                        <option value="53">Rize</option>
+                        <option value="54">Sakarya</option>
+                        <option value="55">Samsun</option>
+                        <option value="56">Siirt</option>
+                        <option value="57">Sinop</option>
+                        <option value="58">Sivas</option>
+                        <option value="59">Tekirdağ</option>
+                        <option value="60">Tokat</option>
+                        <option value="61">Trabzon</option>
+                        <option value="62">Tunceli</option>
+                        <option value="63">Şanlıurfa</option>
+                        <option value="64">Uşak</option>
+                        <option value="65">Van</option>
+                        <option value="66">Yozgat</option>
+                        <option value="67">Zonguldak</option>
+                        <option value="68">Aksaray</option>
+                        <option value="69">Bayburt</option>
+                        <option value="70">Karaman</option>
+                        <option value="71">Kırıkkale</option>
+                        <option value="72">Batman</option>
+                        <option value="73">Şırnak</option>
+                        <option value="74">Bartın</option>
+                        <option value="75">Ardahan</option>
+                        <option value="76">Iğdır</option>
+                        <option value="77">Yalova</option>
+                        <option value="78">Karabük</option>
+                        <option value="79">Kilis</option>
+                        <option value="80">Osmaniye</option>
+                        <option value="81">Düzce</option>
+            </select>
+    </div>
+	
+	    <div class="form-group">
+               <label for="hobies">Hobileriniz:</label>
+                <div class="form-check">
+                    <label for="form-check-label">
+                        <input type="checkbox" name="hobies[]" value="futbol" id="chk1"> Futbol
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <label for="form-check-label">
+                        <input type="checkbox" name="hobies[]" value="basketbol" id="chk2"> Basketbol
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <label for="form-check-label">
+                        <input type="checkbox" name="hobies[]" value="voleybol" id="chk3"> Voleybol
+                    </label>
+                </div>
+                
+                <div class="form-check">
+                    <label for="form-check-label">
+                        <input type="checkbox" name="hobies[]" value="diğer" id="chk4"> Diğer
+                    </label>
+                </div>
+    </div>
+    
+            <div class="form-group">
+            <label for="message">Mesajınız:</label>
+            <textarea name="message" id="message" cols="30" rows="5" class="form-control"></textarea>
+        </div>
+	
+	
+
+							
+	
+    <input type="reset" name="delete" class="btn btn-primary btn-block" value="Temizle">										
+	<input type="submit" name="gonder" class="btn btn-success btn-block" value="Gönder">
+
+</form>
+    </div>
 
         <footer class="py-5 bg-dark text-white text-center">
         2020

@@ -67,7 +67,7 @@ echo <<<EOF
     </header>
     
 
-    <div class="bodi shadow bg-light mt-5 p-4 border-info border rounded w-50 mb-5"><p class="h2"><small class="text-muted">Hoşgeldiniz </small>"G181210069"
+    <div class="bodi shadow bg-light mt-5 p-4 border-info border rounded w-75 mb-5"><p class="h2"><small class="text-muted">Hoşgeldiniz </small>"G181210069"
     </p></div>
 
     
