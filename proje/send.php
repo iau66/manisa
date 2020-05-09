@@ -4,7 +4,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>İAU | Çıkış </title>
+    <title>İAU | Gönderildi </title>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
@@ -28,7 +28,7 @@
     <nav class="navbar bg-dark navbar-expand-sm navbar-dark fixed-top">
         <div class="container">
             
-            <a href="anasayfa.html" class="navbar-brand">
+            <a href="index.html" class="navbar-brand">
                 İAU
             </a>
             
@@ -39,7 +39,7 @@
             <div id="navbarNavDropdown" class="collapse navbar-collapse">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a href="anasayfa.html" class="nav-link">
+                    <a href="index.html" class="nav-link">
                         Ana Sayfa
                     </a>
                 </li>
@@ -96,6 +96,7 @@
     $isim = $_POST["isim"];
     $soyisim = $_POST["soyisim"];
     $email = $_POST["email"];
+    $phone = $_POST["phone"];
     $cinsiyet = $_POST["cinsiyet"];
     $sehir = $_POST["city"];
     $hobiler = $_POST["hobies"];
@@ -105,7 +106,9 @@
     echo "<br>";
     echo "soyisim: ".$soyisim;
     echo "<br>";
-    echo "e-mail: ".$email;
+    echo "e-posta: ".$email;
+    echo "<br>";
+    echo "telefon numarası: ".$phone;
     echo "<br>";
     echo "cinsiyet: ".$cinsiyet;
     echo "<br>";

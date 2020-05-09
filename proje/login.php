@@ -13,6 +13,7 @@ header("Refresh: 2; url=giris.html");
 ob_end_flush();
 
 
+
 echo <<<EOF
 
 <!DOCTYPE html>
@@ -37,7 +38,7 @@ echo <<<EOF
    
     <nav class="navbar bg-dark navbar-expand-sm navbar-dark fixed-top">
         <div class="container">
-            <a href="anasayfa.html" class="navbar-brand">
+            <a href="index.html" class="navbar-brand">
                 İAU
             </a>
         </div>

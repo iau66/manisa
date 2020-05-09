@@ -2,7 +2,7 @@
 session_start();
 ob_start();
 session_destroy();
-header("Refresh: 2; url=anasayfa.html");
+header("Refresh: 2; url=index.html");
 ob_end_flush();
 
 
@@ -29,7 +29,7 @@ echo <<<EOF
    
     <nav class="navbar bg-dark navbar-expand-sm navbar-dark fixed-top">
         <div class="container">
-            <a href="anasayfa.html" class="navbar-brand">
+            <a href="index.html" class="navbar-brand">
                 İAU
             </a>
         </div>

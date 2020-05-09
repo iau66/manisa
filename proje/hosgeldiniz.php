@@ -5,7 +5,6 @@ if(!isset($_SESSION["login"])){
 echo "Bu sayfayı görüntüleme yetkiniz yoktur.";
 }
 else {
-    
 
 
 echo <<<EOF
@@ -40,7 +39,7 @@ echo <<<EOF
     <nav class="navbar bg-dark navbar-expand-sm navbar-dark fixed-top">
         <div class="container">
             
-            <a href="anasayfa.html" class="navbar-brand">
+            <a href="index.html" class="navbar-brand">
                 İAU
             </a>
             
@@ -67,7 +66,15 @@ echo <<<EOF
     </header>
     
 
-    <div class="bodi shadow bg-light mt-5 p-4 border-info border rounded w-75 mb-5"><p class="h2"><small class="text-muted">Hoşgeldiniz </small>"G181210069"
+  
+    <div class="bodi shadow bg-light mt-5 p-4 border-info border rounded w-75 mb-5"><p class="h2"><small class="text-muted">Hoşgeldiniz </small>"
+    
+EOF;
+    echo strtok($user,  '@');
+    
+echo<<<ANA
+    
+    "
     </p></div>
 
     
@@ -76,11 +83,13 @@ echo <<<EOF
         2020
     </footer>
     
+    
+    
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" ></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script> 
 </body>
 </html>
-EOF;
+ANA;
     }
 ?>
