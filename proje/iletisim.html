@@ -11,10 +11,9 @@
         <link rel="stylesheet" href="style.css">
         
         <script>
-        
-        $(document).ready(function(){
-  $('#phone-number').mask('(000) 000-0000');
-});
+                $(document).ready(function(){
+                $('#phone-number').mask('(000) 000-0000');
+                });
         </script>
 
        
@@ -34,6 +33,7 @@
         <script type="text/javascript">
             function isValid(frm)
             { 
+
                 var isim = frm.isim.value;
                 var soyisim = frm.soyisim.value;
                 var email = frm.email.value;
@@ -108,6 +108,20 @@
             return true;
             }
         </script>
+        
+        
+    <script>
+          function onlyAlphabets() {
+          var regex = /^[a-zA-Z]*$/;
+           if (regex.test(document.f.isim.value) && regex.test(document.f.soyisim.value)) {
+
+            return true;
+            } else {
+                alert("isim ve soyisim sadece alfabe içermelidir");
+                return false;
+              }
+            }   
+    </script>
     </head>
     <body>
 
@@ -177,7 +191,7 @@
     
     <div class="bodi shadow bg-light mt-5 p-4 border-info border rounded w-75 mb-5">
 
-    <form action="send.php" method="post" onsubmit="return isValid(this)">
+    <form name="f"  action="send.php" method="post" onsubmit="return isValid(this) && onlyAlphabets()">
 
     <div class="form-group">
     <label for="isim">İsim:</label>
